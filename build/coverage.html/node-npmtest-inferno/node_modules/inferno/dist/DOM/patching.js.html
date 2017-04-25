@@ -197,16 +197,16 @@
     <h1>Code coverage report for <span class="entity">node-npmtest-inferno/node_modules/inferno/dist/DOM/patching.js</span></h1>
     <h2>
         
-        Statements: <span class="metric">6.85% <small>(37 / 540)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Statements: <span class="metric">6.86% <small>(37 / 539)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
         
         
-        Branches: <span class="metric">0% <small>(0 / 361)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Branches: <span class="metric">0% <small>(0 / 359)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
         
         
         Functions: <span class="metric">0% <small>(0 / 16)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
         
         
-        Lines: <span class="metric">6.86% <small>(37 / 539)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Lines: <span class="metric">6.88% <small>(37 / 538)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
         
         Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
     </h2>
@@ -1035,9 +1035,7 @@
 819
 820
 821
-822
-823
-824</td><td class="line-coverage"><span class="cline-any cline-neutral">&nbsp;</span>
+822</td><td class="line-coverage"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1</span>
 <span class="cline-any cline-yes">1</span>
 <span class="cline-any cline-yes">1</span>
@@ -1122,8 +1120,6 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -1881,7 +1877,7 @@ var processElement_1 = require("./wrappers/processElement");
 <span class="cstat-no" title="statement not covered" >                patchComponent(lastVNode, nextVNode, parentDom, lifecycle, context, isSVG, nextFlags &amp; 4 /* ComponentClass */, isRecycling);</span>
             }
             else {
-<span class="cstat-no" title="statement not covered" >                utils_1.replaceVNode(parentDom, mounting_1.mountComponent(nextVNode, null, lifecycle, context, isSVG, nextFlags &amp; 4 /* ComponentClass */), lastVNode, lifecycle, isRecycling);</span>
+<span class="cstat-no" title="statement not covered" >                utils_1.replaceVNode(parentDom, mounting_1.mountComponent(nextVNode, null, lifecycle, context, isSVG, (nextFlags &amp; 4 /* ComponentClass */) &gt; 0), lastVNode, lifecycle, isRecycling);</span>
             }
         }
         else <span class="cstat-no" title="statement not covered" >if (nextFlags &amp; 3970 /* Element */) {</span>
@@ -1944,9 +1940,7 @@ exports.patch = patch;
 <span class="cstat-no" title="statement not covered" >        var lastClassName = lastVNode.className;</span>
 <span class="cstat-no" title="statement not covered" >        var nextClassName = nextVNode.className;</span>
 <span class="cstat-no" title="statement not covered" >        nextVNode.dom = dom;</span>
-<span class="cstat-no" title="statement not covered" >        if (isSVG || (nextFlags &amp; 128 /* SvgElement */) &gt; 0) {</span>
-<span class="cstat-no" title="statement not covered" >            isSVG = true;</span>
-        }
+<span class="cstat-no" title="statement not covered" >        isSVG = isSVG || (nextFlags &amp; 128 /* SvgElement */) &gt; 0;</span>
 <span class="cstat-no" title="statement not covered" >        if (lastChildren !== nextChildren) {</span>
 <span class="cstat-no" title="statement not covered" >            patchChildren(lastFlags, nextFlags, lastChildren, nextChildren, dom, lifecycle, context, isSVG, isRecycling);</span>
         }
@@ -2007,7 +2001,7 @@ exports.patchElement = patchElement;
 <span class="cstat-no" title="statement not covered" >    if (nextFlags &amp; 64 /* HasNonKeyedChildren */) {</span>
 <span class="cstat-no" title="statement not covered" >        patchArray = true;</span>
     }
-    else <span class="cstat-no" title="statement not covered" >if ((lastFlags &amp; 32 /* HasKeyedChildren */) &amp;&amp; (nextFlags &amp; 32 /* HasKeyedChildren */)) {</span>
+    else <span class="cstat-no" title="statement not covered" >if ((lastFlags &amp; 32 /* HasKeyedChildren */) &gt; 0 &amp;&amp; (nextFlags &amp; 32 /* HasKeyedChildren */) &gt; 0) {</span>
 <span class="cstat-no" title="statement not covered" >        patchKeyed = true;</span>
 <span class="cstat-no" title="statement not covered" >        patchArray = true;</span>
     }
@@ -2088,7 +2082,7 @@ exports.patchElement = patchElement;
 <span class="cstat-no" title="statement not covered" >                if (inferno_shared_1.isNull(parentDom)) {</span>
 <span class="cstat-no" title="statement not covered" >                    return true;</span>
                 }
-<span class="cstat-no" title="statement not covered" >                utils_1.replaceChild(parentDom, mounting_1.mountComponent(nextVNode, null, lifecycle, context, isSVG, nextVNode.flags &amp; 4 /* ComponentClass */), lastVNode.dom);</span>
+<span class="cstat-no" title="statement not covered" >                utils_1.replaceChild(parentDom, mounting_1.mountComponent(nextVNode, null, lifecycle, context, isSVG, (nextVNode.flags &amp; 4 /* ComponentClass */) &gt; 0), lastVNode.dom);</span>
             }
             else {
 <span class="cstat-no" title="statement not covered" >                var hasComponentDidUpdate = !inferno_shared_1.isUndefined(instance.componentDidUpdate);</span>
@@ -2275,7 +2269,7 @@ exports.patchNonKeyedChildren = patchNonKeyedChildren;
 <span class="cstat-no" title="statement not covered" >    var nextPos;</span>
 <span class="cstat-no" title="statement not covered" >    var node;</span>
 <span class="cstat-no" title="statement not covered" >    if (aLength === 0) {</span>
-<span class="cstat-no" title="statement not covered" >        if (bLength !== 0) {</span>
+<span class="cstat-no" title="statement not covered" >        if (bLength &gt; 0) {</span>
 <span class="cstat-no" title="statement not covered" >            mounting_1.mountArrayChildren(b, dom, lifecycle, context, isSVG);</span>
         }
 <span class="cstat-no" title="statement not covered" >        return;</span>
@@ -2687,7 +2681,7 @@ exports.patchStyle = patchStyle;
 </table></pre>
 </div>
 <div class="footer">
-    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Tue Apr 18 2017 17:54:16 GMT+0000 (UTC)</div>
+    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Tue Apr 25 2017 18:30:59 GMT+0000 (UTC)</div>
 </div>
 </body>
 </html>
