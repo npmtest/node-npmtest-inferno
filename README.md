@@ -1,6 +1,6 @@
 # npmtest-inferno
 
-#### test coverage for  [inferno (v3.0.4)](https://github.com/infernojs/inferno#readme)  [![npm package](https://img.shields.io/npm/v/npmtest-inferno.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-inferno) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-inferno.svg)](https://travis-ci.org/npmtest/node-npmtest-inferno)
+#### basic test coverage for  [inferno (v3.0.5)](https://github.com/infernojs/inferno#readme)  [![npm package](https://img.shields.io/npm/v/npmtest-inferno.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-inferno) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-inferno.svg)](https://travis-ci.org/npmtest/node-npmtest-inferno)
 
 #### An extremely fast, React-like JavaScript library for building modern user interfaces
 
@@ -10,7 +10,7 @@
 |--:|:--|
 | coverage : | [![istanbul-coverage](https://npmtest.github.io/node-npmtest-inferno/build/coverage.badge.svg)](https://npmtest.github.io/node-npmtest-inferno/build/coverage.html/index.html)|
 | test-report : | [![test-report](https://npmtest.github.io/node-npmtest-inferno/build/test-report.badge.svg)](https://npmtest.github.io/node-npmtest-inferno/build/test-report.html)|
-| build-artifacts : | [![build-artifacts](https://npmtest.github.io/node-npmtest-inferno/glyphicons_144_folder_open.png)](https://github.com/npmtest/node-npmtest-inferno/tree/gh-pages/build)|
+| test-server-github : | [![github.com test-server](https://npmtest.github.io/node-npmtest-inferno/GitHub-Mark-32px.png)](https://npmtest.github.io/node-npmtest-inferno/build/app/index.html) | | build-artifacts : | [![build-artifacts](https://npmtest.github.io/node-npmtest-inferno/glyphicons_144_folder_open.png)](https://github.com/npmtest/node-npmtest-inferno/tree/gh-pages/build)|
 
 - [https://npmtest.github.io/node-npmtest-inferno/build/coverage.html/index.html](https://npmtest.github.io/node-npmtest-inferno/build/coverage.html/index.html)
 
@@ -49,8 +49,8 @@
     "devDependencies": {},
     "directories": {},
     "dist": {
-        "shasum": "cac5495e6c145bfda071d5554b123c37c2033994",
-        "tarball": "https://registry.npmjs.org/inferno/-/inferno-3.0.4.tgz"
+        "shasum": "e827b8db339e5e91bae25a14a1537ebd1f7b89df",
+        "tarball": "https://registry.npmjs.org/inferno/-/inferno-3.0.5.tgz"
     },
     "homepage": "https://github.com/infernojs/inferno#readme",
     "inferno:main": "dist-es/index.js",
@@ -105,7 +105,8 @@
     },
     "scripts": {},
     "typings": "dist/index.d.ts",
-    "version": "3.0.4"
+    "version": "3.0.5",
+    "bin": {}
 }
 ```
 
